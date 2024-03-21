@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script>
+		function centra()
+		{
+			document.getElementById("paragrafo").align="center";<!-- getelement si comporta esattamente con il tag richiamato;-->
+		}
+		function cambia()
+		{
+			document.getElementById("cambiap").innerHTML="sono cambiato!";<!--ciò che c'è scritto dentro in tag-->
+		}
+		function aggiungi()
+		{
+			document.getElementById("aggiungip").innerHTML+="aggiunta"; <!--+= se stesso più qualcosa-->
+	
+		}
+		</script>
+		<title>ciao funzioni</title>
+	</head>
+	<body>
+		<p id="paragrafo"> <!-- si puo mettere su tutti i tipi di tag-->
+		ciao
+		</p>
+		<input type="button"value="cambia!" onclick="centra();"/> 
+		<hr/>
+		<p id="cambiap">
+		ciao
+		</p>
+		<input type="button"value="cambia!" onclick="cambia();"/> 
+		<hr/>
+		<p id="aggiungip">
+		ciao
+		</p>
+		<input type="button"value="cambia!" onclick="aggiungi();"/> 
+		<hr/>
+	</body>
+</html>

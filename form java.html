@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<script>
+		var stato=0;
+		 function validazione()
+		 {
+			var user=document.getElementById("user").value;
+			var pass=document.getElementById("pass").value;
+			var cont=0;
+			if(user.length==0||pass.length==0)
+			{
+				alert("user e pass non possono essere vuote");
+				return;
+			}
+			if(user==pass)
+			{
+				alert("user e pass non possono essere uguali");
+				return;
+			}
+			for(var i=0;i<user.length;i++)
+			{
+				if(user[i]==".")
+				cont++;
+			}
+			if(cont<3)
+			{
+			alert("username deve avere almeno 3 punti");
+				return;
+			}
+			document.getElementById("forma").submit(); 
+		
+		 }
+		 function visibile()
+		 {
+			if(stato==0)
+			 {
+				document.getElementById("img").innerHTML="<img src='hidden.png' width='30'/>";
+				stato=1;
+			 }
+			 else
+			 {
+				document.getElementById("img").innerHTML="";
+				stato=0;
+			 }	
+		 }
+		 
+		 function colore(tipo)
+		 {
+			 document.getElementById("ciao").bgColor=tipo;
+			 if(tipo=="black")
+			 {
+				document.getElementById("ciao").text="white";
+			 }
+			 else
+			 {
+				document.getElementById("ciao").text="black";
+			 }
+		 }
+		</script>
+		<title>controllo password</title>
+	</head>
+	<body id="ciao">
+	
+		<h1>Form</h1>
+		<form action="nonfatemi.php"id="forma">
+			username:<input type="text" name="user"id="user"/><br/>
+			password:<input type="password"name="pass"id="pass"><br/>
+			profilo accesso:
+			<input type="radio" name="color"value="b"onclick="colore('white')"/> Bianco<br/>
+			<input type="radio" name="ciao"value="a"onclick="colore('orange')"/> Arancione<br/>
+			<input type="radio" name="color"value="n"onclick="colore('black')"/> Nero<br/>
+			rendi visibile ad utenti:
+			<input type="checkbox"onclick="visibile()"/><font id="img"></font><!-- si usa il font perche inner modifica cio che sta tra apertura e chiusura-->
+			<form id="img"></form>
+			
+			
+			<input type="button" value="accedi"onclick="validazione()"/> 
+			
+	</body>
+</html>

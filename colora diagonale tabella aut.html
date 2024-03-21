@@ -1,0 +1,41 @@
+<html>
+  <head>       
+		<title>Es</title>     
+			<script language="javascript">	
+				var dim=15,x;
+				var pos=0;
+				function inizia()
+				{
+					var t="";
+					for(var i=0;i<dim;i++)
+					{
+						t=t+"<tr>";
+						for(var j=0;j<dim;j++)
+						{
+							t=t+"<td id='"+i+"_"+j+"'></td>";
+						}
+						t=t+"</tr>";
+					}
+					document.getElementById("barra").innerHTML=t;
+					document.getElementById("0_0").bgColor="black";
+					x=setInterval(progresso,150);
+				}
+				function progresso()
+				{
+					document.getElementById(pos+"_"+pos).bgColor="white";
+					pos++;
+					document.getElementById(pos+"_"+pos).bgColor="black";
+					if(pos==dim-1)
+					{
+						pos=0;
+						clearInterval(x);
+					}
+				}
+			</script>
+	</head>
+	<body>	
+			<input type="button" value="Inizia" onclick="inizia()"/>
+			<table id="barra" height="90%" width="100%" border="1" cellspacing="0">					
+			</table>					
+	</body>
+	</html>

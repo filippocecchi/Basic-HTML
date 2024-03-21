@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>prova form</title>
+	</head>
+	<body>
+		<h1 align="center">Prova form</h1><hr width="50%"align="center"/>
+		<br/><br/>
+		
+		<form action="paginanonfatta">  <!--action invia input ad una pagina che elabora dati non html quando si clicca submit-->
+			Testo:<input type="text" name="testo"/><br/>
+			password:<input type="password" name="pass"/><br/>
+			scalta multipla:<br/>
+			a:<input type="checkbox" name="a"/>
+			b:<input type="checkbox" name="b"/><br/>
+			scalta esclusiva:<br/>
+			x:<input type="radio" name="esclusiva" value="x"/> <!-- devono avere stesso nome e con value il server riceve esclusiva con valore value-->
+			y:<input type="radio" name="esclusiva" value="y"/>
+			<br/>box selezione:
+			<br/><br/><input type="reset" value="per rimpostare scrivo quello che voglio"/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+		 function validazione()
+		 {
+			var user=document.getElementById("user").value;
+			var pass=document.getElementById("pass").value;
+			if(user.length==0||pass.length==0)
+			{
+				alert("user e pass non possono essere vuote");
+				return;
+			}
+			if(user==pass)
+			{
+				alert("user e pass non possono essere uguali");
+				return;
+			}
+			
+			document.getElementById("forma").submit(); <!--invia il form come tasto con attributo submit-->
+		 }
+		 function visibile()
+		 {
+			document.getElementById("pass").type="text";
+		 }
+		</script>
+		<title>controllo password</title>
+	</head>
+	<body>
+		
+		<form action="nonfatemi.php"id="forma">
+			username:<input type="text" name="user"id="user"/><br/>
+			password:<input type="password"name="pass"id="pass"><input type="button" value="vedi"onclick="visibile()"/><br/>
+			<input type="button" value="accedi"onclick="validazione()"/> <!-- per non inviare form non bisogna mettere submit-->
+	</body>
+</html>

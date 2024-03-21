@@ -1,0 +1,52 @@
+<html>
+	<head><title>Esercizio 13</title></head>
+	<body>
+		<form action="paginanonfatta.php" method="post"> <!--di default get si vedono valori in url con post non si vedono-->
+		<table align="center" border="1" height="60%" width="40%">
+			<tr height="15%">
+				<td align="center" bgcolor="lightgreen"><b><font face="verdana" size="4">Forum di registrazione</font></b></td>
+			</tr>
+			<tr><td>
+			<font face="verdana">
+			<table height="100%" align="center" width="60%" valign="top">
+				<tr>
+					<td width="50%">Username:</td>
+					<td width="50%"><input type="text" size="30"maxlength="4"/></td><!-- maxlenght non psso piu scrivere di 4 caratteri size dimensione grafica-->
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password"/></td>
+				</tr>
+				<tr>
+					<td>Ripeti password:</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>Data di nascita:</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>Profili richiesti:</td>
+					<td>Rosso<input type="checkbox" name="rosso"/>Verde<input type="checkbox" name="verde"/><br/></td>
+				</tr>
+				<tr valign="top" height="25%">
+					<td>Fascia anagrafica:</td>
+					<td><input type="radio" name="esclusiva" value="x"/>Maggiorenne<br/>
+					<input type="radio" name="esclusiva" value="x"/>Minorenne<br/>
+					<input type="radio" name="esclusiva" value="x"/>Mah...<br/></td>
+				</tr>
+				<tr height="20%">
+					<td></td>
+					<td valign="top" align="right"><input type="submit"/></td>
+				</tr>
+			</table>
+			</font>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

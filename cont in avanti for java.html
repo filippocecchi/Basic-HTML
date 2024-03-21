@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>java valore assoluto</title>
+	</head>
+	<body bgcolor="black">
+		<h1 align="center">conto in avanti</h1>
+		<script language="javascript">
+			var x,vasso,cont=0;
+			n=Number(prompt("inserisci n"));
+			for(var i=0;i<=n;i++)
+			{
+				if(cont==0)
+				{
+					document.write("<font color='green'>"+i+" </font>");
+				}
+				if(cont==1)
+				{
+					document.write("<font color='light blue'>"+i+" </font>");
+				}
+				if(cont==2)
+				{
+					document.write("<font color='pink'>"+i+" </font>");
+				}
+				if(cont<2)
+				{
+				 cont=cont+1;
+				}
+				else
+				{
+					cont=0;
+				}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>       
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Es</title>     
+			<script>
+			var tot=0;
+			var secondi=0;
+			function inizia()
+			{
+				setInterval(secondo,1000);			
+				tot=tot+1;
+				document.getElementById("1").innerHTML="Numero click:"+tot+"";
+				document.getElementById("5").onclick=conta;
+			}
+			function conta()
+			{
+				tot=tot+1;
+				document.getElementById("1").innerHTML="Numero click:"+tot+"";
+			}
+			function secondo()
+			{
+				secondi=secondi+1;
+				document.getElementById("2").innerHTML="Numero click al secondo:"+tot/secondi+"";
+			}
+			</script>
+	</head>
+	<body>	
+			<img src='Verde.ico' id="5" onclick='inizia()'/>
+			<br/><font id="1">Numero click:0</font>
+			<br/><font id="2">Numero click al secondo:0</font>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script>
+			var vet=["red","orange","lightgreen","pink"];
+			var cont=0,size=4;
+			var valore=0;
+			function cambia()
+			{
+				valore=valore+1;
+				document.getElementById("ciao").innerHTML=valore;
+				document.getElementById("ciao").color=vet[cont];
+				document.getElementById("ciao").size=size;
+				size++;
+				cont=cont+1;
+				if(cont==4)
+				{
+					cont=0;
+				}
+				if(size==7)
+				{
+					size=3;
+				}
+			}
+		</script>
+	</head>
+	<body bgcolor="black">
+		<input type="button" value="aumenta" onclick="cambia()"><br/>
+		<font id="ciao" color="white" size="3">0</font>
+	</body>
+</html>

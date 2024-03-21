@@ -1,0 +1,54 @@
+<html>
+  <head>       
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Es</title>     
+			<script language="javascript">
+			var cont=0;
+				function crea()
+				{
+					var t="";
+					var n=Number(document.getElementById("pdim").value);
+					for(var i=0;i<n;i++)
+					{
+						t=t+"<tr>";
+						for(var j=0;j<n;j++)
+						{
+							t=t+"<td id='"+i+"-"+j+"' onclick='cambia(this.id)'></td>";   <!--assume valore del td con tutti i suoi attributi e varia a seconda del contesto-->
+						}
+						t=t+"</tr>";
+					}
+					document.getElementById("tabe").innerHTML=t;
+					document.getElementById("para1").innerHTML="<input type='button' value='fine' onclick='fine("+n+")'/>";
+				}
+				function cambia(pos)
+				{
+					if(document.getElementById(pos).bgColor=="")
+					{
+						document.getElementById(pos).bgColor="green";
+						cont=cont+1;
+					}
+					document.getElementById("para2").innerHTML=""+cont+"";
+				}
+				function fine(ele)
+				{
+					for(var i=0;i<ele;i++)
+					{
+						for(var j=0;j<ele;j++)
+						{
+							if(document.getElementById(""+i+"-"+j+"").bgColor=="green")
+							{
+								document.getElementById(""+i+"-"+j+"").bgColor="red";
+							}
+							document.getElementById(""+i+"-"+j+"").onclick="";
+						}
+					}
+				}
+			</script>
+	</head>
+	<body>	
+			<p id="para1">Dimensione: <input id="pdim" type="text"/> <input type="button" value="Crea!" onclick="crea();"/></p>
+			<table id="tabe" width="80%" height="80%" border="1" align="center">
+			</table>
+			<p id="para2"></p>	
+</body>
+</html>

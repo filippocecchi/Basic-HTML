@@ -1,0 +1,56 @@
+<html>
+  <head>       
+		<title>Es</title>     
+			<script language="javascript">	
+				var dim=12,tempo=250;
+				var pos=0;
+				function inizia()
+				{
+					var t="<tr>";
+					for(var i=0;i<dim;i++)
+					{
+						t=t+"<td id='"+i+"'></td>";
+					}
+					t=t+"</tr>";
+					document.getElementById("barra").innerHTML=t;
+					document.getElementById("0").bgColor="black";
+					x=setInterval(avanti,tempo);
+				}
+				function avanti()
+				{
+					document.getElementById(pos).bgColor="white";
+					pos++;
+					document.getElementById(pos).bgColor="black";
+					if(pos==dim-1)
+					{
+						clearInterval(x);
+						tempo=tempo*0.85;						
+						x=setInterval(indietro,tempo);
+					}
+				}
+				function indietro()
+				{
+					document.getElementById(pos).bgColor="white";
+					pos--;
+					document.getElementById(pos).bgColor="black";
+					if(pos==0)
+					{
+						clearInterval(x);
+						tempo=tempo*0.85;
+						x=setInterval(avanti,tempo);
+					}
+				}
+			</script>
+	</head>
+	<body>	
+			<input type="button" value="Inizia" onclick="inizia()"/>
+			<table height="4%" width="41%" border="2" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<table id="barra" height="100%" width="100%" border="0" cellspacing="0">					
+						</table>
+					</td>
+				</tr>
+			</table>		
+</body>
+</html>

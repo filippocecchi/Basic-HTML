@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script>
+		var v=[],stato=-1;
+		v[0]="red";
+		v[1]="orange";
+		v[2]="yellow";
+		v[3]="aliceblue";
+		v[4]="lightgreen";
+			function colore()
+			{
+				if(stato<5)
+				{
+					stato++;
+				}
+				else
+				{
+					stato=0;
+				}
+				document.getElementById("aggiungi").innerHTML+="<table width='100%' height='40'><tr><td bgcolor='"+v[stato]+"'></td></tr></table>";
+			}
+		</script>
+		<title>righe</title>
+	</head>
+	<body>
+			<input type="button" value="aggiungi riga"onclick="colore()"/><br/>
+			<p id="aggiungi"></p>
+	</body>
+</html>

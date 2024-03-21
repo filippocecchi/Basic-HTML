@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+		 var cont=0;
+			function change()
+			{
+				if(cont==0)
+				{
+					document.getElementById("immagine").innerHTML="<img src='happy.jpg'onclick='change()'/>";
+					cont=1;
+				}
+				else
+				{
+					document.getElementById("immagine").innerHTML="<img src='sad.jpg'onclick='change()'/>";
+					cont=0;
+				}
+			}
+		</script>
+		<title>funzioni facce</title>
+	</head>
+	<body>
+	<p id="immagine">
+		<img src="sad.jpg" onclick="change()"/> 
+	</p>
+	</body>
+</html>

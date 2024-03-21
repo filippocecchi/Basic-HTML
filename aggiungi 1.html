@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script>
+		 var cont=0;
+		function aggiungi()
+		{
+			cont=cont+1;
+			document.getElementById("paragrafo").innerHTML=cont;<!--senza apici se si vuole usare variabile e senza piu senno concatena cosi sostituisce-->
+		}
+		</script>
+		<title>aumenta cliccando</title>
+	</head>
+	<body>
+		<input type="button"value="cambia!" onclick="aggiungi();"/> 
+		<p id="paragrafo">
+		0
+		</p>
+	</body>
+</html>
