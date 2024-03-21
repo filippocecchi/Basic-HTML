@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>zig zag</title>
+	</head>
+	<body>
+		<script language="javascript">
+			var n,cont=1;
+			n=Number(prompt("inserisci n"));
+			document.write("<table width='50%' align='center' border='0'cellspacing='0'>");
+			for(var i=0;i<n;i++)
+			{
+				document.write("<tr height='25'>");
+				if(i%2==0)
+				{
+					document.write("<td bgcolor='black' colspan='3'></td>");
+				}
+				else
+				{
+					if(cont%2==0)
+					{
+						document.write("<td bgcolor='black' width='8%'></td>");
+						document.write("<td bgcolor='white' colspan='2'></td>");
+						cont=cont+1;
+					}
+					else
+					{
+						document.write("<td bgcolor='white' colspan='2'></td>");
+						document.write("<td bgcolor='black' width='8%'></td>");
+						cont=cont+1;
+					}
+				}
+				
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</body>
+</html>

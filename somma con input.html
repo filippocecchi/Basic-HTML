@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script>
+			function somma()
+			{
+				var a=Number(document.getElementById("posa").value); <!--anche per gli input-->
+				var b=Number(document.getElementById("posb").value); 
+				var ris=a+b;
+				document.getElementById("posris").innerHTML=ris;
+			}
+		</script>
+		<title>funzioni facce</title>
+	</head>
+	<body>
+	<input type="text"id="posa"/>+<input type="text"id="posb"/> <input type="button" value="="onclick="somma()"/>
+	<font id="posris"></font>
+	</body>
+</html>

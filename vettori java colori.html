@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>java vettori</title>
+	</head>
+	<body>
+		<script language="javascript">
+			var n,v=[],cont;
+			n=Number(prompt("inserisci n"));
+			<!--si puo scrivere v[40]=3;e crea un vettore di 41 o v[40]="ciao"-->
+			for(var i=0;i<n;i++)
+			{
+				v[i]=prompt("inserisci colore"+i);
+			}
+			<!--document.write(v);oppure-->
+			document.write("<table align='center' width='80%'height='20%'>");
+			document.write("<tr>");
+			for(var i=0;i<n;i++)
+			{
+			
+				document.write("<td bgcolor='"+v[i]+"'></td>");
+				
+			}
+			document.write("</tr>");
+			document.write("</table>");
+		</script>
+	</body>
+</html>

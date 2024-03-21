@@ -1,0 +1,25 @@
+<html>
+  <head>       
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Es</title>     
+			<script>
+				var x;
+				var i=0;
+				var frase="la frase che volete tanto non cambia nulla";
+				function scrivi()
+				{
+					document.getElementById("posris").innerHTML+=frase[i];
+					i++;
+					if(i==frase.length) <!--oppure frase[i%frase.length]-->
+					{
+						i=0;
+					}
+				}
+			</script>
+	</head>
+	<body>	
+			<input type="button" value="Inizia" onclick="x=setInterval(scrivi,250);"/>
+			<input type="button" value="Fine" onclick="clearInterval(x)"/>
+			<p id="posris" align="justify"></p>
+	</body>
+</html>

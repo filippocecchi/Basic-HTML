@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Hello world java script</title>
+	</head>
+	<body>
+		<script language="javascript"><!--language di default è javascript-->
+			var n, v=[],Somma=0,max=0;
+			n=Number(prompt("inserisci n"));
+			<!--v[40]=3;v[39]="ciao";v[3]=8.5;-->
+			for(var i=0;i<n;i++)
+			{
+				v[i]=Number(prompt("Inserisci elemento "+i));
+			}
+			document.write(v);
+			document.write("</br>");
+			max=v[0]
+			for(var i=0;i<n;i++)
+			{
+				document.write(v[i]+" ");
+				Somma=Somma+v[i];
+				if(v[i]>max)
+					max=v[i]
+			}
+			Somma=Somma/n;
+			document.write("</br> La media risulta "+Somma+" </br> Il massimo risulta "+max);
+		</script>
+	</body>
+</html>
